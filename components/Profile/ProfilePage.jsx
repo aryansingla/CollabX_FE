@@ -52,7 +52,7 @@ const ProfilePage = () => {
 
         {/* bottom section */}
 
-        <div className="profileBottomSection m-auto mt-[3rem] w-[90%]  ">
+        <div className="profileBottomSection m-auto mt-[0.2rem] sm:mt-[3rem] w-[90%]  ">
             <div className="profileFields flex justify-around">
                 <a className='text-[#fff] font-semibold cursor-pointer'
                 onClick={()=>{setProgress(25),setSection("Bio"),console.log(section);}}>
@@ -84,10 +84,10 @@ const ProfilePage = () => {
             <> <Skills/> </> : ""}
 
             { section === "Project" ? 
-            <> <Projects/></> : "" }
+            <> <Projects setSection={setSection}/></> : "" }
 
             { section === "Experience" ? 
-            <> <Experience/> </> : "" }
+            <> <Experience setSection={setSection}/> </> : "" }
            
         </div>
     </div>
