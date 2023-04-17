@@ -78,16 +78,16 @@ const ProfilePage = () => {
             </div>
 
             { section==="Bio" ?
-            <> <Bio section={section} setSection={setSection}/> </> : "" }
+            <Bio section={section} setSection={setSection}/>: "" }
 
             { section === "Skills" ? 
-            <> <Skills/> </> : ""}
+            <Skills/>: ""}
 
             { section === "Project" ? 
-            <> <Projects setSection={setSection}/></> : "" }
+            <Projects setSection={setSection}/>: "" }
 
             { section === "Experience" ? 
-            <> <Experience setSection={setSection}/> </> : "" }
+            <Experience setSection={setSection}/>: "" }
            
         </div>
     </div>
