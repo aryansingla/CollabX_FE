@@ -9,6 +9,11 @@ import Experience from './Experience';
 const ProfilePage = () => {
     const[progress,setProgress] = useState(25);
     const[section,setSection] = useState("Bio");
+    const [bio,setBio]=useState(true)
+    const [skills,setSkills]=useState(false)
+    const [project,setProject]=useState(false)
+    const [experience,setExperience]=useState(false)
+
      
     return (
     <div className='container1 bg-gradient-to-r from-[#22094e] to-[#051458]'>
@@ -16,9 +21,9 @@ const ProfilePage = () => {
         <div className="profileUpperSection bg-gradient-to-r from-[#36094e] to-[#280e55] pb-8 
         sm:pb-[4rem] rounded-b-[1rem] sm:rounded-b-[4rem]">
         <Image src="/images/CollabXLogo.png" width="150" height="150" alt="CollabXLogo"
-         className='invisible sm:visible m-auto pt-5 '/>
+         className='invisible pt-5 m-auto sm:visible '/>
          <div className="profileUpperMobile flex sm:hidden justify-between mt-[-3.5rem] pl-[1rem] pr-[1rem] pb-[1rem]">
-         <Image src="/images/CollabX.png" width="30" height="30" alt="CollabXLogo" className=' md:hidden block  '/>
+         <Image src="/images/CollabX.png" width="30" height="30" alt="CollabXLogo" className='block md:hidden'/>
          <AiOutlineWallet className='text-[#fff] mt-1 mr-3'/>
          </div>
        
@@ -40,9 +45,9 @@ const ProfilePage = () => {
             <h3 className='text-[#fff] m-auto'>Rajib Mondal</h3>
             </div>
             
-            <div className="socialIcons h-12 p-2">
+            <div className="h-12 p-2 socialIcons">
             <h3 className='text-[#fff] hidden sm:block'>Social Media</h3>
-            <div className="socialIcons2 flex justify-center sm:justify-around  ">
+            <div className="flex justify-center socialIcons2 sm:justify-around ">
             <AiOutlineMail className='text-[#fff] opacity-[52%] text-lg sm:text-2xl mt-1 mr-3'/>
             <AiFillLinkedin className='text-[#fff]  text-lg sm:text-2xl mt-1 mr-3'/>
             <AiFillTwitterSquare className='text-[#fff] opacity-[52%] text-lg sm:text-2xl mt-1 mr-3'/>   
@@ -53,29 +58,152 @@ const ProfilePage = () => {
         {/* bottom section */}
 
         <div className="profileBottomSection m-auto mt-[0.2rem] sm:mt-[3rem] w-[90%]  ">
-            <div className="profileFields flex justify-around">
+            <div className="flex justify-around profileFields">
                 <a className='text-[#fff] font-semibold cursor-pointer'
-                onClick={()=>{setProgress(25),setSection("Bio"),console.log(section);}}>
+                onClick={()=>{setProgress(25), setBio(true),setSkills(false),setProject(false),setExperience(false),setSection("Bio"),console.log(section);}}>
                      Bio
                 </a>
                 <a className='text-[#fff] font-semibold cursor-pointer'
-                onClick={()=>{setProgress(50),setSection("Skills")}}> 
+                onClick={()=>{setProgress(50),setBio(false),setSkills(true),setProject(false),setExperience(false),setSection("Skills")}}> 
                 Skills
                 </a>
                 <a className='text-[#fff] font-semibold cursor-pointer'
-                onClick={()=>{setProgress(75),setSection("Project")}}> 
+                onClick={()=>{setProgress(75),setBio(false),setSkills(false),setProject(true),setExperience(false),setSection("Project")}}> 
                 Project Details
                 </a>
                 <a className='text-[#fff] font-semibold cursor-pointer'
-                onClick={()=>{setProgress(100),setSection("Experience")}}> 
+                onClick={()=>{setProgress(100),setBio(false),setSkills(false),setProject(false),setExperience(true),setSection("Experience")}}> 
                 Experience
                 </a>
             </div>
-            <progress className="progress progress-secondary w-[90%] m-auto" value={progress} max="100"></progress>
+            <progress className="hidden sm:block progress progress-secondary w-[90%] m-auto" value={progress} max="100"></progress>
+             {/* mobile progress bar */}
+             <div className='flex justify-center mt-6 mb-14 sm:hidden '>
+             
+              <div className='flex justify-between w-[90%] h-1 bg-white'> 
+                 {/* circles */}
 
-            <div className="progressMobile">
-                <div className='rounded-full w-2'>.</div>
-            </div>
+             {/* first */}
+
+               { bio && <> <div className= 'flex  w-[33%]'>
+                <div className='flex w-full'>
+                <div className='w-3 h-3 bg-pink-500 rounded-full -mt-[3.5px] '></div>
+                <div className='h-1 w-[50%] bg-pink-500'></div>
+                </div>
+          
+                <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div>
+               </div>
+
+         
+               <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div>
+               <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div></> }
+{/* second */}   
+{ skills && <>
+                            <div className= 'flex  w-[33%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+          
+                <div className='w-3 h-3 bg-pink-500 rounded-full -mt-[3.5px] '></div>
+               </div>
+
+         
+               <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div>
+               <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div>
+               </> }
+
+     {/* third */}
+
+     {project && <>
+     <div className='flex w-[66%]'>
+                            <div className= 'flex  w-[50%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+               </div>
+
+               <div className= 'flex  w-[50%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+                
+          
+                <div className='w-3 h-3 bg-pink-500 rounded-full -mt-[3.5px] '></div>
+               </div>
+
+               </div>
+          
+               <div className='w-3 h-3 bg-white rounded-full -mt-[3.5px] '></div>
+               </> }
+
+    {/* fourth */}
+
+  { experience && <>
+     <div className='flex w-[100%]'>
+                            <div className= 'flex  w-[33%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+               </div>
+
+               <div className= 'flex  w-[33%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+               </div>
+
+               <div className= 'flex  w-[33%]'>
+                <div className='flex w-full'>
+
+                
+       <div className='flex items-center justify-center w-4 h-4 -mt-[5px] -ml-1 bg-pink-500 rounded-full '>
+                
+                <div className='w-2 h-2 bg-white rounded-full '></div>
+               </div>
+                <div className='h-1 w-[100%] bg-pink-500'></div>
+                </div>
+                
+          
+                <div className='w-3 h-3 bg-pink-500 rounded-full -mt-[3.5px] -mr-[5px] '></div>
+               </div>
+
+               </div>
+               </>}
+
+               {/* end  */}
+
+              </div>
+                 </div>
 
             { section==="Bio" ?
             <> <Bio section={section} setSection={setSection}/> </> : "" }
