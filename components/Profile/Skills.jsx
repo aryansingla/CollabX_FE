@@ -12,7 +12,7 @@
 //   return (
 //     <>
 //         <div className="skillDetails w-[90%] sm:w-[60%] h-[40vh] m-auto mt-2 pt-2 sm:pt-2 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg ">
-//           <div className="upperPart justify-between ">
+//           <div className="justify-between upperPart ">
 //             <div>
 //               <label className='text-[#fff] p-5'>Languages *</label>
 //             </div>
@@ -32,9 +32,9 @@
 import React, { useState } from 'react';
 
 const options = [
-  { value: 'option1', label: 'Option 1' },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' }
+  { value: 'Java', label: 'Java' },
+  { value: 'ReactJs', label: 'ReactJs' },
+  { value: 'Tailwind', label: 'Tailwind' }
 ];
 
 const Skills = () => {
@@ -59,23 +59,39 @@ const Skills = () => {
 
   return (
     <div>
-      <h2>Dropdown</h2>
-      <select onChange={handleSelectOption}>
-        <option value="">Select an option</option>
-        {options.map(option => (
-          <option key={option.value} value={option.value}>{option.label}</option>
-        ))}
+          <>
+         <div className="skillDetails w-[90%] sm:w-[60%] h-[40vh] m-auto mt-2 pt-2 sm:pt-2 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg ">
+           <div className="justify-between upperPart ">
+            <div className='flex w-[100%] p-2'>
+             <div className='w-[50%] p-4 text-red-500'>
+             <select onChange={handleSelectOption} className='w-[70%] p-1 rounded text-black font-semibold hover:cursor-pointer '>
+        <option value="">Skills</option>
         {customOption && (
           <option key="custom" value="custom">{customOption}</option>
         )}
+        {options.map(option => (
+          <option key={option.value} value={option.value}>{option.label}</option>
+        ))}
+      
       </select>
-      {selectedOptions.map(option => (
-        <span key={option.value} className="tag">
+             </div>
+           <div className='w-[50%] flex items-center justify-center mr-4 '>  <input type="text" className='w-full p-1 rounded placeholder:text-center placeholder:text-sm placeholder:text-gray-500 placeholder:font-semibold' value={customOption} onChange={handleCustomOptionChange} placeholder='Search and see in dropdown if not in options' /></div>
+           </div>
+             <div >
+             {selectedOptions.map(option => (
+        <span key={option.value} className="p-1 px-2 ml-2 mr-2 text-white border-2 border-white rounded-2xl tag ">
           {option.label}
-          <button type="button" onClick={() => handleRemoveOption(option)}>x</button>
+          <button type="button" className='ml-2 text-red-300' onClick={() => handleRemoveOption(option)}>x</button>
         </span>
       ))}
-      <input type="text" value={customOption} onChange={handleCustomOptionChange} />
+             </div>
+           </div>
+          
+         </div>
+   </>
+    
+     
+      
     </div>
   );
 };
