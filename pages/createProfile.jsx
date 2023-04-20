@@ -1,12 +1,12 @@
 import React from 'react'
-import GetProfile from '../components/Profile/GetProfile'
+import ProfilePage from '../components/Profile/ProfilePage'
 
 const profile = () => {
   return (
     <>
-    <GetProfile/>
+    <ProfilePage/>
     </>
-  )
+    )
 }
 
 export default profile
