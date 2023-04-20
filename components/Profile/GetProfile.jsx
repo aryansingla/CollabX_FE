@@ -14,10 +14,10 @@ const GetProfile = () => {
 
      
     return (
-    <div className='container1 bg-gradient-to-r from-[#22094e] to-[#051458]'>
+    <div className='container1 '>
         {/* upper section */}
-        <div className="profileUpperSection bg-gradient-to-r from-[#36094e] to-[#280e55] pb-8 
-        sm:pb-[4rem] rounded-b-[1rem] sm:rounded-b-[4rem]">
+        <div className="profileUpperSection pb-8 
+        sm:pb-[4rem] rounded-b-[1rem] sm:rounded-b-[4rem]" style={{background: "linear-gradient(171deg, rgba(0, 0, 0, 0.1352) 57.31%, rgba(228, 14, 130, 0.1248) 95.07%)"}}>
         <Image src="/images/CollabXLogo.png" width="150" height="150" alt="CollabXLogo"
          className='invisible pt-5 m-auto sm:visible '/>
          <div className="profileUpperMobile flex sm:hidden justify-between mt-[-3.5rem] pl-[1rem] pr-[1rem] pb-[1rem]">
