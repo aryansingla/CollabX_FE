@@ -50,58 +50,96 @@ const GetProfile = () => {
             <AiOutlineMail className='text-[#fff] opacity-[52%] text-lg sm:text-2xl mt-1 mr-3'/>
             <AiFillLinkedin className='text-[#fff]  text-lg sm:text-2xl mt-1 mr-3'/>
             <AiFillTwitterSquare className='text-[#fff] opacity-[52%] text-lg sm:text-2xl mt-1 mr-3'/>
-            <button class="inline-flex items-center rounded-md bg-secondary px-1 py-1  text-xs text-white hover:bg-indigo-500">
-                Share
-                <IoIosShareAlt/>
+            <button class="inline-flex items-center rounded-3xl bg-secondary px-2 py-1  text-xs text-white hover:bg-indigo-500">
+                Share Profile
+                <IoIosShareAlt size={17} className='ml-1'/>
             </button>  
             </div>
             </div>
         </div>
 
         {/* bottom section */}
+        <div className='flex flex-col items-center w-full '>
+            {/* bio and skills  */}
 
-            <div className="bioandSkills mt-[2rem] pl-[1rem] flex-col sm:flex sm:flex-row justify-around sm:w-[80%] sm:m-auto sm:mt-[4rem]">
-                <div className="bioDetails projectDetails w-[90%] sm:w-[45%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-2">
-                    <h3>Bio</h3>
+            <div className="bioandSkills mt-[2rem] flex-col sm:flex sm:flex-row justify-between sm:px-[1rem] w-[90%] sm:w-[80%] sm:m-auto sm:mt-[4rem]">
+                <div className="bioDetails projectDetails w-full sm:w-[47%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-3">
+                    <h3 className='font-semibold'>Bio</h3>
                     <p className='mt-[1rem]'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
-                <div className="bioDetails projectDetails w-[90%] sm:w-[45%]   bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-2 mt-[1rem] sm:mt-[0]">
-                    <h3>Skills</h3>
-                    <p className='mt-[1rem]'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                </div>
-            </div>
-            <div className="Experience history mt-[2rem] pl-[1rem] sm:pl-[3rem] justify-around sm:w-[80%] sm:m-auto sm:mt-[2rem]">
-                <div className="bioDetails projectDetails w-[90%] sm:w-[100%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-2">
-                    Employment History
-                    <div className="expDetails">
-                        <div className="part1 flex justify-between mt-8">
-                            <div className="part1_left">
-                                <h3>Title Name</h3>
-                                <h5>Company Name,Dec 2019-Dec 20202</h5>
-                            </div>
-                            <div className="part1_right">
-                                Maharashtra,India
-                            </div>
-                        </div>
-                        <div className="part2 mt-5">
-                            <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
-                        </div>
-                        <div className="part1 flex justify-between mt-8">
-                            <div className="part1_left">
-                                <h3>Title Name</h3>
-                                <h5>Company Name,Dec 2019-Dec 20202</h5>
-                            </div>
-                            <div className="part1_right">
-                                Maharashtra,India
-                            </div>
-                        </div>
-                        <div className="part2 mt-5">
-                            <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
-                        </div>
+                <div className="bioDetails projectDetails w-full sm:w-[47%]   bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-3 mt-[1rem] sm:mt-[0]">
+                    <h3 className='font-semibold'>Skills</h3>
+                    <div className='mt-[1rem] grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#C++</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl '>#JavaScript</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#MongoDB</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#Docker</div>
                     </div>
                 </div>
             </div>
 
+           {/* experience             */}
+            <div className="Experience history mt-[2rem]  sm:px-[1rem] justify-around w-[90%] sm:w-[80%] sm:m-auto sm:mt-[2rem]">
+                <div className="bioDetails projectDetails w-full sm:w-[100%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 ">
+                   <div className='pt-3 pl-3 font-semibold'>
+                    Employment History
+                    </div>
+                    <div className="expDetails">
+                        <div className='border-l-4 border-l-[#FF369B] pl-3 pr-3'>
+                        <div className="flex justify-between mt-8 part1">
+                            <div className="part1_left">
+                                <h3 className='text-lg font-semibold'>Title Name</h3>
+                                <h5 className='font-semibold'>Company Name,Dec 2019-Dec 20202</h5>
+                            </div>
+                            <div className="font-semibold part1_right">
+                                Maharashtra,India
+                            </div>
+                        </div>
+                        <div className="mt-5 part2">
+                            <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
+                        </div>
+                        </div>
+                        <div className='border-l-4 border-l-[#FF369B] pl-3 pr-3'>
+                        <div className="flex justify-between mt-8 part1">
+                            <div className="part1_left">
+                                <h3 className='text-lg font-semibold'>Title Name</h3>
+                                <h5 className='font-semibold'>Company Name,Dec 2019-Dec 20202</h5>
+                            </div>
+                            <div className="font-semibold part1_right">
+                                Maharashtra,India
+                            </div>
+                        </div>
+                        <div className="mt-5 part2">
+                            <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+ {/* projects */}
+ <div className="Experience history mt-[2rem] sm:px-[1rem] justify-around w-[90%] sm:w-[80%] sm:m-auto sm:mt-[2rem] sm:mb-[2rem]">
+                <div className="bioDetails projectDetails w-full sm:w-[100%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4  ">
+                    <div className='pt-3 pl-3 font-semibold'>
+                    Project Details
+                    </div>
+                    <div className="expDetails border-l-4 border-l-[#FF369B] pl-3 pr-3">
+                        <div className="flex justify-between mt-8 part1">
+                            <div className="part1_left">
+                                <h3 className='text-lg font-semibold'>Project Name</h3>
+                                <h5 className='font-semibold'>Mongo DB, Flutter, Docker</h5>
+                            </div>
+                            <div className="font-semibold part1_right">
+                                Dec 2020 - March 2021                            </div>
+                        </div>
+                        <div className="mt-5 part2">
+                            <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
   )
 }
