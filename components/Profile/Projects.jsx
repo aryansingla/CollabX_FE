@@ -64,7 +64,7 @@ const Projects = ({section, setSection}) => {
         return (
           <>
             <div
-              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-[-1rem] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4"
+              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-[-1rem] sm:mt-[1rem] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4"
               key={index}
             >
               <div className="projectUpper flex justify-between p-3">
