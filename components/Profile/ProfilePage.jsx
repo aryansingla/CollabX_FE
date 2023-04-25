@@ -21,12 +21,12 @@ const ProfilePage = () => {
   const [experience, setExperience] = useState(false);
 
   return (
-    <div className="container1 bg-gradient-to-r from-[#22094e] to-[#051458]">
+    <div className="container1 h-[100vh] ">
       {/* upper section */}
       <div
         className="profileUpperSection bg-gradient-to-r from-[#36094e] to-[#280e55] pb-8 
         sm:pb-[4rem] rounded-b-[1rem] sm:rounded-b-[4rem]"
-      >
+       >
         <Image
           src="/images/CollabXLogo.png"
           width="150"
