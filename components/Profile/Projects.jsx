@@ -5,7 +5,7 @@ import {
   AiFillCaretRight,
 } from "react-icons/ai";
 
-const Projects = ({section, setSection}) => {
+const Projects = ({setSection,setProgress}) => {
   const [projectCount, setProjectCount] = useState(1);
   const [formFields, setFormFields] = useState([
     {
@@ -64,7 +64,7 @@ const Projects = ({section, setSection}) => {
         return (
           <>
             <div
-              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-[-1rem] sm:mt-[1rem] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4"
+              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-7 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4"
               key={index}
             >
               <div className="flex justify-between p-3 projectUpper">
@@ -156,11 +156,12 @@ const Projects = ({section, setSection}) => {
           </>
         );
       })}
-      <div className="flex justify-between pt-3 pl-5 pr-5 nextPrevButton sm:hidden">
+      <div className="flex justify-between pt-3 pb-3 pl-5 pr-5 nextPrevButton sm:hidden">
         <h3
           className="text-[#fff] text-lg "
           onClick={() => {
-            setSection("Skills");
+            setSection("Skills")
+            ,setProgress(50)
           }}
         >
           Prev
@@ -169,7 +170,8 @@ const Projects = ({section, setSection}) => {
         <h3
           className="text-[#fff] text-lg"
           onClick={() => {
-            setSection("Experience");
+            setSection("Experience")
+            ,setProgress(100)
           }}
         >
           Next

@@ -89,7 +89,7 @@ const GetProfile = () => {
                         <div className="flex justify-between mt-8 part1">
                             <div className="part1_left">
                                 <h3 className='text-lg font-semibold'>Title Name</h3>
-                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 20202</h5>
+                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 2020</h5>
                                 <div className="block font-semibold sm:hidden part1_right">
                                 Maharashtra,India
                             </div>
@@ -106,7 +106,7 @@ const GetProfile = () => {
                         <div className="flex justify-between mt-8 part1">
                             <div className="part1_left">
                                 <h3 className='text-lg font-semibold'>Title Name</h3>
-                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 20202</h5>
+                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 2020</h5>
                                 <div className="block font-semibold sm:hidden part1_right">
                                 Maharashtra,India
                             </div>
