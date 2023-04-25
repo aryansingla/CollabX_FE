@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 const options = [
   { value: "Java", label: "Java" },
@@ -7,7 +8,7 @@ const options = [
   { value: "Tailwind", label: "Tailwind" },
 ];
 
-const Skills = () => {
+const Skills = ({setSection,setProgress}) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [customOption, setCustomOption] = useState("");
 
@@ -35,12 +36,12 @@ const Skills = () => {
   };
 
   return (
-    <div>
+    
       <>
-        <div className="skillDetails w-[90%] sm:w-[60%] h-[40vh] m-auto mt-2 pt-2 sm:pt-2 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg ">
-          <div className="justify-between upperPart ">
-            <div className="flex w-[100%] p-2">
-              <div className="w-[50%] p-4 text-red-500">
+        <div className="skillDetails w-[90%] sm:w-[60%] h-[40vh] m-auto mt-7 pt-2 sm:pt-2 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg ">
+          <div className="justify-between h-full upperPart">
+            <div className=" flex sm:flex-row flex-col w-[100%] p-2">
+              <div className="w-[70%] sm:ml-0 -ml-3 sm:w-[50%] p-4 text-red-500">
                 <select
                   onChange={handleSelectOption}
                   className="w-[70%] p-1 rounded text-black font-semibold hover:cursor-pointer "
@@ -58,7 +59,7 @@ const Skills = () => {
                   ))}
                 </select>
               </div>
-              <div className="w-[50%] flex items-center justify-center mr-4 ">
+              <div className="sm:w-[50%] w-[90%] ml-1 sm:mb-0 mb-3 flex items-center justify-center mr-4 ">
                 {" "}
                 <input
                   type="text"
@@ -69,7 +70,7 @@ const Skills = () => {
                 />
               </div>
             </div>
-            <div>
+            <div  className="grid grid-cols-2 gap-y-3 sm:grid-cols-6 ">
               {selectedOptions.map((option) => (
                 <span
                   key={option.value}
@@ -88,8 +89,29 @@ const Skills = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-between pt-3 pl-5 pr-5 nextPrevButton sm:hidden">
+        <h3
+          className="text-[#fff] text-lg "
+          onClick={() => {
+            setSection("Bio"),setProgress(25)
+          }}
+        >
+          Prev
+          <AiFillCaretLeft className="inline-block ml-2" />
+        </h3>
+        <h3
+          className="text-[#fff] text-lg"
+          onClick={() => {
+            setSection("Project"),
+            setProgress(75)
+          }}
+        >
+          Next
+          <AiFillCaretRight className="inline-block ml-2" />
+        </h3>
+      </div>
       </>
-    </div>
+    
   );
 };
 

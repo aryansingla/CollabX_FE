@@ -89,9 +89,12 @@ const GetProfile = () => {
                         <div className="flex justify-between mt-8 part1">
                             <div className="part1_left">
                                 <h3 className='text-lg font-semibold'>Title Name</h3>
-                                <h5 className='font-semibold'>Company Name,Dec 2019-Dec 20202</h5>
+                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 2020</h5>
+                                <div className="block font-semibold sm:hidden part1_right">
+                                Maharashtra,India
                             </div>
-                            <div className="font-semibold part1_right">
+                            </div>
+                            <div className="hidden font-semibold sm:block part1_right">
                                 Maharashtra,India
                             </div>
                         </div>
@@ -103,9 +106,12 @@ const GetProfile = () => {
                         <div className="flex justify-between mt-8 part1">
                             <div className="part1_left">
                                 <h3 className='text-lg font-semibold'>Title Name</h3>
-                                <h5 className='font-semibold'>Company Name,Dec 2019-Dec 20202</h5>
+                                <h5 className='font-semibold'>Company Name, Dec 2019-Dec 2020</h5>
+                                <div className="block font-semibold sm:hidden part1_right">
+                                Maharashtra,India
                             </div>
-                            <div className="font-semibold part1_right">
+                            </div>
+                            <div className="hidden font-semibold sm:block part1_right">
                                 Maharashtra,India
                             </div>
                         </div>
@@ -118,7 +124,7 @@ const GetProfile = () => {
             </div>
  
  {/* projects */}
- <div className="Experience history mt-[2rem] sm:px-[1rem] justify-around w-[90%] sm:w-[80%] sm:m-auto sm:mt-[2rem] sm:mb-[2rem]">
+ <div className="Experience history mt-[2rem] sm:px-[1rem] justify-around w-[90%] sm:w-[80%] sm:m-auto sm:mt-[2rem] mb-[2rem] sm:mb-[2rem]">
                 <div className="bioDetails projectDetails w-full sm:w-[100%] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4  ">
                     <div className='pt-3 pl-3 font-semibold'>
                     Project Details
@@ -127,10 +133,13 @@ const GetProfile = () => {
                         <div className="flex justify-between mt-8 part1">
                             <div className="part1_left">
                                 <h3 className='text-lg font-semibold'>Project Name</h3>
+                                <div className="block font-semibold sm:hidden part1_right">
+                                Dec 2020 - March 2021 </div>
                                 <h5 className='font-semibold'>Mongo DB, Flutter, Docker</h5>
                             </div>
-                            <div className="font-semibold part1_right">
-                                Dec 2020 - March 2021                            </div>
+                            <div className="hidden font-semibold sm:block part1_right">
+                                Dec 2020 - March 2021 </div>
+
                         </div>
                         <div className="mt-5 part2">
                             <h3>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</h3>
