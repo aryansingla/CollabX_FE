@@ -71,12 +71,12 @@ const listView = () => {
           </div>
         </div>
       </div>
-      <div className="profileCards sm:p-5 flex-col sm:flex sm:flex-row justify-around">
+      <div className="profileCards pt-[10px] pb-[10px] pl-[10px] pr-[10px] sm:p-5 flex-col sm:flex sm:flex-row justify-around">
         <div
           className="profileCard w-[100%] sm:w-[30%] mt-[1rem] mb-4rem pb-rem pt-[1rem] text-sm
-          hover:shadow-[2px_2px_20px_10px_#521734]"
+          "
           style={{
-            background: "linear-gradient(180deg, #23094E 0%, #000000 100%)",
+            background: "linear-gradient(180deg, #23094E 0%, #000000 100%)" 
           }}
         >
           <div className="profileCardUpperSection flex justify-around">
@@ -162,10 +162,12 @@ const listView = () => {
               </div>
               <div className="skills  bg-[#01002A] p-5 mt-2 rounded-[1rem]">
                 <h3 className="text-lg text-[#05eafa]">Skills</h3>
-                <p className="text-[#fff]">
-                  Amet minim mollit non deserunt ullamco est sit aliqua non
-                  deserunt ullamco est sit aliqua{" "}
-                </p>
+                <div className='mt-[1rem] grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#C++</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl '>#JavaScript</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#MongoDB</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#Docker</div>
+                    </div>
               </div>
             </div>
             <div className="viewProfile bg-[#01002A] ml-[1.25rem] mr-[1.25rem] mt-2 p-5 rounded-[1rem] flex justify-between">
