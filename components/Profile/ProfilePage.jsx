@@ -15,10 +15,6 @@ import Experience from "./Experience";
 const ProfilePage = () => {
   const [progress, setProgress] = useState(25);
   const [section, setSection] = useState("Bio");
-  const [bio, setBio] = useState(true);
-  const [skills, setSkills] = useState(false);
-  const [project, setProject] = useState(false);
-  const [experience, setExperience] = useState(false);
 
   return (
     <div className="container1 h-[100vh] ">
@@ -84,15 +80,11 @@ const ProfilePage = () => {
       {/* bottom section */}
 
       <div className="profileBottomSection m-auto mt-[0.2rem] sm:mt-[3rem] w-[90%]  ">
-        <div className="flex justify-around profileFields">
+        <div className="justify-around hidden sm:flex profileFields">
           <a
             className="text-[#fff] font-semibold cursor-pointer"
             onClick={() => {
               setProgress(25),
-                setBio(true),
-                setSkills(false),
-                setProject(false),
-                setExperience(false),
                 setSection("Bio"),
                 console.log(section);
             }}
@@ -103,10 +95,6 @@ const ProfilePage = () => {
             className="text-[#fff] font-semibold cursor-pointer"
             onClick={() => {
               setProgress(50),
-                setBio(false),
-                setSkills(true),
-                setProject(false),
-                setExperience(false),
                 setSection("Skills");
             }}
           >
@@ -116,10 +104,6 @@ const ProfilePage = () => {
             className="text-[#fff] font-semibold cursor-pointer"
             onClick={() => {
               setProgress(75),
-                setBio(false),
-                setSkills(false),
-                setProject(true),
-                setExperience(false),
                 setSection("Project");
             }}
           >
@@ -129,10 +113,6 @@ const ProfilePage = () => {
             className="text-[#fff] font-semibold cursor-pointer"
             onClick={() => {
               setProgress(100),
-                setBio(false),
-                setSkills(false),
-                setProject(false),
-                setExperience(true),
                 setSection("Experience");
             }}
           >
@@ -140,7 +120,7 @@ const ProfilePage = () => {
           </a>
         </div>
         <progress
-          className="hidden sm:block progress progress-secondary w-[90%] m-auto"
+          className="hidden sm:block progress progress-secondary w-[90%] mt-2 m-auto"
           value={progress}
           max="100"
         ></progress>
@@ -151,7 +131,7 @@ const ProfilePage = () => {
 
             {/* first */}
 
-            {bio && (
+            {section==="Bio" && (
               <>
                 {" "}
                 <div className="flex  w-[33%]">
@@ -167,7 +147,7 @@ const ProfilePage = () => {
               </>
             )}
             {/* second */}
-            {skills && (
+            {section==="Skills"&& (
               <>
                 <div className="flex  w-[33%]">
                   <div className="flex w-full">
@@ -187,7 +167,7 @@ const ProfilePage = () => {
 
             {/* third */}
 
-            {project && (
+            {section==="Project" && (
               <>
                 <div className="flex w-[66%]">
                   <div className="flex  w-[50%]">
@@ -217,7 +197,7 @@ const ProfilePage = () => {
 
             {/* fourth */}
 
-            {experience && (
+            {section==="Experience" && (
               <>
                 <div className="flex w-[100%]">
                   <div className="flex  w-[33%]">
@@ -257,16 +237,16 @@ const ProfilePage = () => {
         </div>
 
         {section === "Bio" ? (
-          <Bio section={section} setSection={setSection} />
+          <Bio section={section} setSection={setSection} progress={progress} setProgress={setProgress} />
         ) : (
           ""
         )}
 
-        {section === "Skills" ? <Skills /> : ""}
+        {section === "Skills" ? <Skills setSection={setSection} setProgress={setProgress} /> : ""}
 
-        {section === "Project" ? <Projects setSection={setSection} /> : ""}
+        {section === "Project" ? <Projects setSection={setSection} setProgress={setProgress} /> : ""}
 
-        {section === "Experience" ? <Experience setSection={setSection} /> : ""}
+        {section === "Experience" ? <Experience setSection={setSection} setProgress={setProgress} /> : ""}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiFillPlusCircle,AiFillCaretLeft } from "react-icons/ai";
-const Experience = ({setSection}) => {
+const Experience = ({setSection,setProgress}) => {
   const [expCount, setExpCount] = useState(1);
   const [experienceFields, setExperienceFields] = useState([
     {
@@ -59,17 +59,17 @@ const Experience = ({setSection}) => {
         return (
           <>
             <div
-              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-[-1rem] sm:mt-[1rem] bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4"
+              className="projectDetails w-[90%] sm:w-[60%] m-auto mt-7 bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 "
               key={index}
             >
-              <div className="projectUpper flex justify-between p-3">
-                <div className="title font-bold">Experience</div>
+              <div className="flex justify-between p-3 projectUpper">
+                <div className="font-bold title">Experience</div>
                 <AiFillPlusCircle
-                  className="text-secondary text-2xl mt-1 mr-3 cursor-pointer"
+                  className="mt-1 mr-3 text-2xl cursor-pointer text-secondary"
                   onClick={addExperience}
                 />
               </div>
-              <div className="projectMiddle text-center">
+              <div className="text-center projectMiddle">
                 <h3 className="text-[#fff]">
                   Experience {experienceFields[index].projectCount}
                 </h3>
@@ -77,8 +77,8 @@ const Experience = ({setSection}) => {
               </div>
               <div className="projectBottom">
                 <form>
-                  <div className="form1 sm:flex justify-around">
-                    <div className="pl-2 flex-col sm:block">
+                  <div className="justify-around form1 sm:flex">
+                    <div className="flex-col pl-2 sm:block">
                       <div className="mt-3">
                         <label>Title of Experience</label>
                       </div>
@@ -107,7 +107,7 @@ const Experience = ({setSection}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="form2 sm:flex justify-around mt-2">
+                  <div className="justify-around mt-2 form2 sm:flex">
                     <div className="pl-2">
                       <div className="mt-3">
                         <label>Start Date</label>
@@ -137,7 +137,7 @@ const Experience = ({setSection}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="form3 m-auto pl-2 pr-2 mt-4">
+                  <div className="pl-2 pr-2 m-auto mt-4 form3">
                     <label>Description</label>
                     <textarea
                       className="textarea textarea-lg w-[100%] m-auto rounded-lg text-black"
@@ -152,11 +152,12 @@ const Experience = ({setSection}) => {
           </>
         );
       })}
-      <div className="nextPrevButton flex sm:hidden justify-between pl-5 pr-5 pt-3">
+      <div className="flex justify-between pt-3 pb-3 pl-5 pr-5 nextPrevButton sm:hidden">
         <h3
           className="text-[#fff] text-lg "
           onClick={() => {
-            setSection("Project");
+            setSection("Project"),
+            setProgress(75)
           }}
         >
           Prev
