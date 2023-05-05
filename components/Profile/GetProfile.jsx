@@ -69,11 +69,11 @@ const GetProfile = () => {
                 </div>
                 <div className="bioDetails projectDetails w-full sm:w-[47%]   bg-gradient-to-r from-[#36094e] to-[#280e55] rounded-lg text-[#fff] pb-4 p-3 mt-[1rem] sm:mt-[0]">
                     <h3 className='font-semibold'>Skills</h3>
-                    <div className='mt-[1rem] grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#C++</div>
-                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl '>#JavaScript</div>
-                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#MongoDB</div>
-                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl'>#Docker</div>
+                    <div className='mt-[1rem] grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 '>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl text-white'>#C++</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl text-[#fff]'>#JavaScript</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl text-[#fff]'>#MongoDB</div>
+                        <div className='w-full p-1 px-2 border-2 border-white rounded-3xl text-[#fff]'>#Docker</div>
                     </div>
                 </div>
             </div>
