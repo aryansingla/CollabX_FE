@@ -23,7 +23,7 @@ const yourIdeas = () => {
   }
   return (
     <div
-    className='h-[100%] sm:p-10  w-full bg-gradient-to-b sm:bg-gradient-to-r from-[#23094E] from-0% to-black to-100%'>
+    className=' min-h-[100vh] sm:p-10  w-full bg-gradient-to-b sm:bg-gradient-to-r from-[#23094E] from-0% to-black to-100%' >
        {/* nav */}
         <div className='mb-8 hidden sm:flex flex-row justify-between items-center w-[90%] m-auto  bg-gradient-to-r from-[#030C30] from-50% to-[#43087A] t0-50% rounded-full p-2 pl-3'>
         <div className='ml-3 -mt-2 img'>
@@ -65,7 +65,7 @@ const yourIdeas = () => {
 
         {/* mobile */}
           {/* nav */}
-          <div className='flex flex-row items-center justify-between m-5 sm:hidden'>
+          <div className='flex flex-row items-center justify-between m-5 sm:hidden '>
             <div>
           <Image
             height={48}
@@ -98,13 +98,13 @@ const yourIdeas = () => {
           </div> 
         </div>
      
-        {/* search  */}
-        <div className='flex items-center w-full mb-4 sm:hidden'>
-        <Input icon='search' placeholder='Search by project Ideas or by tags' className='w-[90%] m-4 ml-6' />
-        <AiFillPlusCircle size={50} color='#E40E82' className='mr-4 rounded-full ' />
+          {/* search  */}
+          <div className='flex items-center w-full mb-4 justify-evenly sm:hidden'>
+        <Input icon='search' placeholder='Search by project Ideas or by tags' className='w-[70%] m-4 ml-6' />
+        <AiFillPlusCircle size={45} color='#E40E82' className='mr-4 border-4 border-[#ffffff] border-opacity-[0.16] rounded-full ' />
         </div>
          {/* opennedNav in phn */}
-      {phonenav &&   <div className='w-full' >
+      {phonenav &&   <div className='relative w-full ' >
         <ul className='absolute flex-col items-center justify-between w-full bg-opacity-90  font-medium text-center text-white bg-[#E40E82]'>
                 <li className='p-3 border-b-2 border-black '>Profiles</li>
                 <li className='p-3 border-b-2 border-black '>Ideas</li>
@@ -112,7 +112,7 @@ const yourIdeas = () => {
             </ul>
         </div>}
         {/* second-section */}
-        <div className='block text-white sm:hidden'>
+        <div className='block h-full text-white sm:hidden '>
           {/* if  */}
          {showYours && <button onClick={changeYours} className='w-full'><div className='flex items-center justify-between px-5 py-2 rounded-2xl m-4   
           bg-[#01002A] text-lg font-medium'><p>Created by you</p><IoMdArrowDropdown/></div></button> } 
@@ -238,7 +238,7 @@ const yourIdeas = () => {
         </div>
         </div>
         {/* large  */}
-        <div className='sm:w-[90%] min-h-[80%] max-h-fit sm:flex hidden sm:flex-row flex-col sm:justify-between sm:m-auto mt-10 text-white text-center font-medium text-lg'>
+        <div className='sm:w-[90%] min-h-[80%] max-h-full sm:flex hidden sm:flex-row flex-col sm:justify-between sm:m-auto mt-10 text-white text-center font-medium text-lg'>
              <div className='sm:w-[49%] sm:bg-[#01002a] rounded-2xl p-6'>
                 <div className='flex justify-center'>
                <p className=' sm:block hidden mb-6 w-[90%]'>Created by you</p> 
