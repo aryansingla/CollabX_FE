@@ -23,7 +23,7 @@ const yourIdeas = () => {
   }
   return (
     <div
-    className='h-fit sm:p-10  w-full bg-gradient-to-b sm:bg-gradient-to-r from-[#23094E] from-0% to-black to-100%'>
+    className='h-[100%] sm:p-10  w-full bg-gradient-to-b sm:bg-gradient-to-r from-[#23094E] from-0% to-black to-100%'>
        {/* nav */}
         <div className='mb-8 hidden sm:flex flex-row justify-between items-center w-[90%] m-auto  bg-gradient-to-r from-[#030C30] from-50% to-[#43087A] t0-50% rounded-full p-2 pl-3'>
         <div className='ml-3 -mt-2 img'>
@@ -37,8 +37,8 @@ const yourIdeas = () => {
           </div>
           <div className='w-[30%]'>
             <ul className='flex justify-between font-medium text-white '>
-                <li>Profiles</li>
-                <li>Ideas</li>
+            <li><a href="/listView">Profile</a></li>
+              <li><a href="/projectIdeas">Ideas</a></li>
                 <li>Showcases</li>
             </ul>
           </div>
