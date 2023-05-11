@@ -37,8 +37,8 @@ const yourIdeas = () => {
           </div>
           <div className='w-[30%]'>
             <ul className='flex justify-between font-medium text-white '>
-                <li>Profiles</li>
-                <li>Ideas</li>
+            <li><a href="/listView">Profile</a></li>
+              <li><a href="/projectIdeas">Ideas</a></li>
                 <li>Showcases</li>
             </ul>
           </div>
