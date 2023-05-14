@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 
 const Projects = ({setSection,setProgress}) => {
-  const [projectCount, setProjectCount] = useState(1);
+  // const [projectCount, setProjectCount] = useState(1);
   const [formFields, setFormFields] = useState([
     {
       title: "",
@@ -14,7 +14,6 @@ const Projects = ({setSection,setProgress}) => {
       duration: "",
       link: "",
       description: "",
-      projectCount: projectCount,
     },
   ]);
   const handleTitle = (event, index) => {
@@ -54,7 +53,6 @@ const Projects = ({setSection,setProgress}) => {
       duration: "",
       link: "",
       description: "",
-      projectCount: projectCount + 1,
     };
     setFormFields([...formFields, object]);
   };
@@ -76,7 +74,8 @@ const Projects = ({setSection,setProgress}) => {
               </div>
               <div className="text-center projectMiddle">
                 <h3 className="text-[#fff]">
-                  Project {formFields[index].projectCount}
+                  {/* Project {formFields[index].projectCount} */}
+                  Project
                 </h3>
                 <hr className="text-[#fff] h-3 w-[70%] m-auto mt-1" />
               </div>

@@ -17,7 +17,7 @@ const ProfilePage = () => {
   const [section, setSection] = useState("Bio");
 
   return (
-    <div className="container1 h-[100vh] ">
+    <div className="container1">
       {/* upper section */}
       <div
         className="profileUpperSection bg-gradient-to-r from-[#36094e] to-[#280e55] pb-8 
@@ -247,6 +247,10 @@ const ProfilePage = () => {
         {section === "Project" ? <Projects setSection={setSection} setProgress={setProgress} /> : ""}
 
         {section === "Experience" ? <Experience setSection={setSection} setProgress={setProgress} /> : ""}
+        {
+          progress === 100 ? <button className="btn btn-secondary absolute sm:left-[90%] left-[70%] sm:top-[25%] top-[20%]">Submit</button> : ""
+        }
+
       </div>
     </div>
   );
