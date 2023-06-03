@@ -187,7 +187,11 @@ const projectRoom = () => {
                         text-center">Abstain</div>
                     </div>
                 </div>
+                <div className="contibutorBoxPlusIcon w-[10%] absolute right-3 z-10">
+                  <BsPlusCircleFill color="white" size="50" className="items-end" />
+                </div>
           </div>
+
         </div>
 
         <div className="roomOptions flex m-auto w-[90%] text-[#fff] justify-around md:hidden">
@@ -280,6 +284,9 @@ const projectRoom = () => {
                         <div className="option3 border-solid border-[1px] border-white w-[34%]
                         text-center">Abstain</div>
                     </div>
+                </div>
+                <div className="contibutorBoxPlusIcon w-[10%] absolute right-3 z-10">
+                  <BsPlusCircleFill color="white" size="50" className="items-end" />
                 </div>
             </div>
             </>
